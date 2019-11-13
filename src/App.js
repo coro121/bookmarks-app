@@ -55,6 +55,7 @@ class App extends Component {
   }
 
   render() {
+    //creating contextValue so it can be used in the return when creating the route to the component
     const contextValue = {
       bookmarks: this.state.bookmarks,
       addBookmark: this.addBookmark,
@@ -75,7 +76,7 @@ class App extends Component {
             path='/'
             component={BookmarkList}
           />
-        </div>
+        </div>  
         </BookmarksContext.Provider>
       </main>
     );
